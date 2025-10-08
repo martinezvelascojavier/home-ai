@@ -44,3 +44,29 @@ echo '{
 }' > .prettierrc
 
 echo "✅ Entorno configurado correctamente."
+# --------------------------------------------------------------------
+# [POST-REINICIO] Sesión de terminal para habilitar `code` y crear .prettierrc
+# (Se documenta como comentarios; no es código ejecutable)
+#
+# Last login: Wed Oct  8 16:55:38 on ttys001
+# javiermartinezvelasco@MacBook-Air-7 ~ % code -v
+# 1.99.3
+# 17baf841131aa23349f217ca7c570c76ee87b957
+# arm64
+# javiermartinezvelasco@MacBook-Air-7 ~ % cd /Users/javiermartinezvelasco/VSCode_Python/HomeAI
+# code .
+#
+# javiermartinezvelasco@MacBook-Air-7 HomeAI % echo '{
+#   "semi": false,
+#   "singleQuote": true,
+#   "trailingComma": "es5",
+#   "tabWidth": 2,
+#   "printWidth": 100
+# }' > .prettierrc
+#
+# javiermartinezvelasco@MacBook-Air-7 HomeAI % cd /Users/javiermartinezvelasco/VSCode_Python/HomeAI
+# echo "console.log(\"Hola Mundo\");" > test.js
+#
+# javiermartinezvelasco@MacBook-Air-7 HomeAI % rm test.js
+# javiermartinezvelasco@MacBook-Air-7 HomeAI %
+# --------------------------------------------------------------------

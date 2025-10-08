@@ -1,40 +1,30 @@
-#!/bin/bash
-# ===========================================
-#  DÍA 2 · CONFIGURAR ENTORNO DE DESARROLLO
-# ===========================================
+# 🧩 DÍA 2 — Sesión tras reiniciar y configuración de VS Code
 
-echo "⚙️  Instalando y configurando entorno para HomeAI..."
+A continuación se detalla la sesión real de terminal después de reiniciar el sistema y configurar el comando `code`, así como la creación y prueba del archivo `.prettierrc`.
 
-brew install nvm
-mkdir -p ~/.nvm
+---
 
-# Añadir a ~/.zshrc:
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+## ⚙️ Comandos ejecutados
 
-source ~/.zshrc
-nvm install 20
-nvm use 20
-echo "20" > .nvmrc
+```bash
+Last login: Wed Oct  8 17:35:28 on ttys001
 
-brew install pnpm
-pnpm -v
+# Acceder a la carpeta del proyecto
+cd VSCode_Python/
+cd HomeAI/
 
-brew install supabase/tap/supabase
-supabase -v
-supabase login
-supabase projects list
+# Verificar que el comando "code" está disponible
+code -v
+# Resultado:
+# 1.99.3
+# 17baf841131aa23349f217ca7c570c76ee87b957
+# arm64
 
-cat > .env.example << 'XEOF'
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-OPENAI_API_KEY=
-XEOF
+# Abrir el proyecto en VS Code
+cd /Users/javiermartinezvelasco/VSCode_Python/HomeAI
+code .
 
-cp .env.example .env.local
-
+# Crear archivo de configuración de Prettier
 echo '{
   "semi": false,
   "singleQuote": true,
@@ -43,4 +33,10 @@ echo '{
   "printWidth": 100
 }' > .prettierrc
 
-echo "✅ Entorno configurado correctamente."
+# Crear archivo de prueba para verificar el formateo
+cd /Users/javiermartinezvelasco/VSCode_Python/HomeAI
+echo "console.log(\"Hola Mundo\");" > test.js
+
+# Eliminar el archivo de prueba tras verificar el formato
+rm test.js
+
