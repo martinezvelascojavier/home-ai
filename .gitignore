@@ -1,5 +1,21 @@
-node_modules/
-.env*
-.supabase/
-.DS_Store
+# Node / Next.js
+node_modules
+.next
+out
+dist
+
+# Env files
+.env.local
 .env
+
+# Temporary / system files
+tmp.json
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# VSCode
+.vscode
